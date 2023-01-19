@@ -10,11 +10,10 @@
 //  Constant definitions 
 
 module slow_and # ( parameter NUMINPUTS = 2 ) (
-  input wire a,
-  input wire b,
+  input wire [NUMINPUTS-1:0] a,
   output wire result
 );
 
-assign #5 result = a && b;  
+assign #3 result = &a;  
 
 endmodule

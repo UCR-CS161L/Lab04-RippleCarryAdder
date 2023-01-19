@@ -11,11 +11,9 @@
 
 module slow_or # ( parameter NUMINPUTS = 2 ) (
   input wire [NUMINPUTS-1:0] a,
-  output reg result
+  output wire result
 );
 
-always @(*) begin
-  result = |a;
-end
+assign #2 result = |a;
 
 endmodule

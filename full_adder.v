@@ -21,9 +21,9 @@ module full_adder (
   wire [2:0] level2;
   wire c_out_w;
 
-  slow_and and1(.a(a), .b(b),    .result(level1[0]));
-  slow_and and2(.a(a), .b(c_in), .result(level1[1]));
-  slow_and and3(.a(b), .b(c_in), .result(level1[2]));
+  slow_and and1(.a({a, b}),    .result(level1[0]));
+  slow_and and2(.a({a, c_in}), .result(level1[1]));
+  slow_and and3(.a({b, c_in}), .result(level1[2]));
 
   slow_or #(.NUMINPUTS(3)) or1(.a(level1), .result(c_out_w));
 
