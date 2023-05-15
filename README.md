@@ -1,4 +1,4 @@
-# Lab 2 - Rippler Carry Adder 
+# Lab 4 - Rippler Carry Adder 
 
 ## Introduction
 
@@ -87,9 +87,9 @@ as part of this lab GitHub repository in [ripple_carry_adder_tb.v](./ripple_carr
 
 The first group of tests should only test that the addition functionality works as it should for
 a fixed number of bits, lets start at 8-bits. You want test basic results, such as 0 + 0 = 0, A + B
-actually equals A+B, and then also test the boundaries where carry out should occur, such as 127 + 1. 
-Then add a couple of random values (you don't need to generate random number, just come up with random
-values for the operands), just to be sure.
+actually equals A+B, and then also test the boundaries where carry out should occur, such as 255 + 1 
+(for unsigned, or 127+1 for signed, but with no carryout). Then add a couple of random values (you 
+don't need to generate random number, just come up with random values for the operands), just to be sure.
 
 For the second group of tests we're going to use the `parameters` keyword to reuse the ripple carry
 adder module with an increasing number of bits. Since the previous group tested 8-bits, we know 
