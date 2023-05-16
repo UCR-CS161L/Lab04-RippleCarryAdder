@@ -1,4 +1,4 @@
-# Lab 4 - Rippler Carry Adder 
+# Lab 5 - Adders 
 
 ## Introduction
 
